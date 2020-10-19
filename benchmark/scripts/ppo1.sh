@@ -1,10 +1,10 @@
 
 for seed in {1..2}
 do
-    (sleep 0.3 && nohup xvfb-run -a python ppo_autoregressive.py \
-    --gym-id MicrortsMining-v2 \
+    (sleep 0.3 && nohup xvfb-run -a python ppo.py \
+    --gym-id MicrortsMining-v3 \
     --total-timesteps 10000000 \
-    --wandb-project-name gym-microrts \
+    --wandb-project-name rts-generalization \
     --prod-mode \
     --wandb-entity vwxyzjn --cuda False \
     --capture-video \
@@ -14,10 +14,10 @@ done
 
 for seed in {1..2}
 do
-    (sleep 0.3 && nohup xvfb-run -a python ppo_autoregressive.py \
-    --gym-id MicrortsProduceWorker-v2 \
+    (sleep 0.3 && nohup xvfb-run -a python ppo.py \
+    --gym-id MicrortsProduceWorker-v3 \
     --total-timesteps 10000000 \
-    --wandb-project-name gym-microrts \
+    --wandb-project-name rts-generalization \
     --prod-mode \
     --wandb-entity vwxyzjn --cuda False \
     --capture-video \
@@ -27,10 +27,10 @@ done
 
 for seed in {1..2}
 do
-    (sleep 0.3 && nohup xvfb-run -a python ppo_autoregressive.py \
-    --gym-id MicrortsAttackPassiveEnemySparseReward-v2 \
+    (sleep 0.3 && nohup xvfb-run -a python ppo.py \
+    --gym-id MicrortsAttackPassiveEnemySparseReward-v3 \
     --total-timesteps 10000000 \
-    --wandb-project-name gym-microrts \
+    --wandb-project-name rts-generalization \
     --prod-mode \
     --wandb-entity vwxyzjn --cuda False \
     --capture-video \
@@ -40,10 +40,10 @@ done
 
 for seed in {1..2}
 do
-    (sleep 0.3 && nohup xvfb-run -a python ppo_autoregressive.py \
-    --gym-id MicrortsProduceCombatUnitsSparseReward-v2 \
+    (sleep 0.3 && nohup xvfb-run -a python ppo.py \
+    --gym-id MicrortsProduceCombatUnitsSparseReward-v3 \
     --total-timesteps 10000000 \
-    --wandb-project-name gym-microrts \
+    --wandb-project-name rts-generalization \
     --prod-mode \
     --wandb-entity vwxyzjn --cuda False \
     --capture-video \
