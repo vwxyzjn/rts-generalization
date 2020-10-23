@@ -12,3 +12,15 @@ python resume.py \
     --num-hours 100.0 \
     --upload-files-baseurl $UPLOAD_FILES_BASEURL \
     --submit-aws $SUBMIT_AWS
+
+python resume.py \
+    --wandb-project vwxyzjn/rts-generalization \
+    --run-state killed \
+    --job-queue cleanrl \
+    --job-definition gym-microrts \
+    --num-seed 4 \
+    --num-vcpu 2 \
+    --num-memory 13000 \
+    --num-hours 100.0 \
+    --upload-files-baseurl $UPLOAD_FILES_BASEURL \
+    --submit-aws $SUBMIT_AWS
